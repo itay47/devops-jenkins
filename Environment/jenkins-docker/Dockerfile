@@ -31,5 +31,5 @@ ENV MAVEN_HOME /opt/maven
 
 
 
-ENV JAVA_OPTS="-Xmx4024m -Duser.timezone='Asia/Jerusalem'"
+ENV JAVA_OPTS="-Xmx4096m -Duser.timezone='Asia/Jerusalem'"
 ENV JENKINS_OPTS="--logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war"
