@@ -1,11 +1,11 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins
 
 USER root
 
 RUN mkdir /var/log/jenkins
 RUN mkdir /var/cache/jenkins
-RUN chown -R jenkins:jenkins /var/log/jenkins
-RUN chown -R jenkins:jenkins /var/cache/jenkins
+#RUN chown -R jenkins:jenkins /var/log/jenkins
+#RUN chown -R jenkins:jenkins /var/cache/jenkins
 
 # Install maven 3.3.9
 RUN wget --no-verbose -O /tmp/apache-maven-3.3.9-bin.tar.gz http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
@@ -25,7 +25,8 @@ RUN wget --no-verbose -O /tmp/apache-maven-3.3.9-bin.tar.gz http://www-eu.apache
 
 
 
-USER jenkins
+#USER jenkins
+USER root
 
 ENV MAVEN_HOME /opt/maven
 
